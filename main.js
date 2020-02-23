@@ -9,14 +9,24 @@ const app = () => {
 
   //time display
   const timeDisplay = document.querySelector(".time-display");
+  const timeSelect = document.querySelectorAll(".time-select button");
 
   //get length of timer circle outline
   const outlineLength = outline.getTotalLength();
   console.log(outlineLength);
 
-  //duration
+  //default duration
   let duration = 600;
 
+  //select duration
+  timeSelect.forEach(option => {
+    option.addEventListener("click", function(){
+      duration = this.getAttribute("data-time");
+      timeDisplay.textContent = `${Math.floor(duration/60)}:${Math.floor(duration%60)}`;
+    })
+  })
+
+  //timer circle outline and offset circle
   outline.style.strokeDasharray = outlineLength;
   outline.style.strokeDashoffset = outlineLength;
 
@@ -48,6 +58,16 @@ const app = () => {
     //animate timer circle
     let progress = outlineLength - (currentTime / duration) * outlineLength;
     outline.style.strokeDashoffset = progress;
+
+    //animate text
+    timeDisplay.textContent = `${minutes}:${seconds}`;
+
+    if(currentTime >= duration){
+      song.pause();
+      song.currentTime = 0;
+      play.src = "./svg/play.svg";
+      video.pause();
+    }
   }
 };
 
