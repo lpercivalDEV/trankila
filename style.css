@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: black;
+}
+
 .app{
   height: 100vh;
   display: flex;
