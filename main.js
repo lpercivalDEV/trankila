@@ -44,7 +44,7 @@ const app = () => {
   play.addEventListener("click", ()=> {
     checkPlaying(song);
   })
-  
+
   //keyboard access play sound
   play.addEventListener("keydown", ()=> {
     checkPlaying(song);

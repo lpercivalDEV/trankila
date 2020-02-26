@@ -10,16 +10,16 @@
   <body>
     <section class="app">
       <div class="vid-container">
-        <video loop>
+        <video loop muted>
           <source src="./video/rain.mp4" type="video/mp4">
         </video>
       </div>
       <div class="time-select">
-        <!-- <button data-time="120">2 minutes</button> -->
-        <button data-time="300" >5 minutes</button>
-        <button data-time="600" >10 minutes</button>
-        <button data-time="1800" >30 minutes</button>
-        <button data-time="3600" >1 hour</button>
+        <button data-time="120">2 minutes</button>
+        <button data-time="300">5 minutes</button>
+        <button data-time="600">10 minutes</button>
+        <button data-time="900">15 minutes</button>
+        <button data-time="1200">20 minutes</button>
       </div>
       <div class="player-container">
         <audio class="song">
@@ -42,21 +42,30 @@
         <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
           <img src="./svg/rain.svg" alt="rain">
         </button>
-        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
-          <img src="./svg/beach.svg" alt="rain">
+        <button data-sound="./sounds/sunny.mp3" data-video="./video/sunny.mp4">
+          <img src="./svg/sun.svg" alt="rain">
         </button>
-        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
+        <button data-sound="./sounds/forest.mp3" data-video="./video/forest.mp4">
           <img src="./svg/forest.svg" alt="rain">
         </button>
         <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4">
           <img src="./svg/waves.svg" alt="beach">
         </button>
-        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
+        <button data-sound="./sounds/birds.mp3" data-video="./video/birds.mp4">
           <img src="./svg/birds.svg" alt="rain">
         </button>
       </div>
     </section>
-
+    <details closed>
+      <summary>Video Sources</summary>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=ynLpZGegiJE&t=27s">Rain</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Kb8CW3axqRE&t=0s">Sunny</a></li>
+        <li><a href="https://www.youtube.com/watch?v=Ftm2uv7-Ybw&t=0s">Forest</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ajwwLEMLaIA">Beach</a></li>
+        <li><a href="https://www.youtube.com/watch?v=tbodhmmqa-g">Birds</a></li>
+      </ul>
+    </details>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
