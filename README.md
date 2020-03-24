@@ -3,11 +3,7 @@ Trankila is a simple meditation app with a visual timer, timer selections, and b
 
 **Link to project:** http://recruiters-love-seeing-live-demos.com/
 
-![alt tag](http://placecorgi.com/1200/650)
-![alt tag](http://placecorgi.com/1200/650)
-![alt tag](http://placecorgi.com/1200/650)
-![alt tag](http://placecorgi.com/1200/650)
-![alt tag](http://placecorgi.com/1200/650)
+![alt tag](https://github.com/lpercivalDEV/trankila/blob/master/app_previews/trankila1.png)
 
 ## How It's Made:
 
@@ -15,14 +11,21 @@ Trankila is a simple meditation app with a visual timer, timer selections, and b
 
 Trankila is built using vanilla JavaScript, CSS, and HTML. Each time selection button has data attributes that hold the time values for each selection. This attribute is then used to populate the time display at the bottom of the app.
 
+![alt tag](https://github.com/lpercivalDEV/trankila/blob/master/app_previews/trankila2.png)
+
 There is a circular image that helps visualize the passing of time. By using two svg images layered on top of one another, I am able to use the circle and stroke to animate the movement of one circle "filling in" the circle behind it.
 
+![alt tag](https://github.com/lpercivalDEV/trankila/blob/master/app_previews/trankila3.png)
+
 There is a play button that has a click event listener attached to it which will start the sound and video once clicked. It will also display the pause icon. When the pause icon is clicked, it will stop the sound/video and switch back to displaying the play icon.
+
+![alt tag](https://github.com/lpercivalDEV/trankila/blob/master/app_previews/trankila4.png)
 
 The videos are selected using the colored icons on the right side of the app. These buttons have data attributes that can be used to replace the default `src` of the video element with the appropriate video. The sound files have data attributes that are used to calculate how much time has passed which is used to update the time display at the bottom of the app.
 
 Keyboard only navigation is possible in this app.
 
+![alt tag](https://github.com/lpercivalDEV/trankila/blob/master/app_previews/trankila5.png)
 
 ## Optimizations
 
