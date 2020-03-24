@@ -2,7 +2,7 @@ const app = () => {
   const song = document.querySelector(".song");
   const play = document.querySelector(".play");
   const outline = document.querySelector(".moving-outline circle");
-  const video = document.querySelector(".vid-container video");
+  const video = document.querySelector(".vid-container iframe");
 
   //sounds
   const sounds = document.querySelectorAll(".sound-picker button");
@@ -13,7 +13,6 @@ const app = () => {
 
   //get length of timer circle outline
   const outlineLength = outline.getTotalLength();
-  console.log(outlineLength);
 
   //default duration
   let duration = 600;
@@ -33,9 +32,10 @@ const app = () => {
   //select different sounds
   sounds.forEach(sound => {
     sound.addEventListener("click", function(){
-      song.src = this.getAttribute("data-sound");
+      // song.src = this.getAttribute("data-sound");
       video.src = this.getAttribute("data-video");
-      checkPlaying(song);
+      video.play();
+      // checkPlaying(song);
     })
   });
 
@@ -53,19 +53,19 @@ const app = () => {
   //stop/play sound option
   const checkPlaying = song => {
     if(song.paused){
-      song.play();
+      // song.play();
       video.play();
       play.src = "./svg/pause.svg";
     }else{
-      song.pause();
+      // song.pause();
       video.pause();
       play.src = "./svg/play.svg";
     }
   }
 
   //calculate elapsed song time
-  song.ontimeupdate = () => {
-    let currentTime = song.currentTime;
+  video.ontimeupdate = () => {
+    let currentTime = video.currentTime;
     let elapsed = duration - currentTime;
     let seconds = Math.floor(elapsed % 60);
     let minutes = Math.floor(elapsed / 60);
@@ -79,10 +79,14 @@ const app = () => {
 
     if(currentTime >= duration){
       song.pause();
-      song.currentTime = 0;
+      video.currentTime = 0;
       play.src = "./svg/play.svg";
       video.pause();
     }
+    // else if(currentTime < 0){
+    //   song.pause();
+    //   video.pause();
+    // }
   }
 };
 

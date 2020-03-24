@@ -10,9 +10,13 @@
   <body>
     <section class="app">
       <div class="vid-container">
-        <video loop muted>
-          <source src="./video/rain.mp4" type="video/mp4">
-        </video>
+        <audio loop>
+          <source src="./video/rain.mp3">
+        </audio>
+        <!-- <video loop> -->
+          <iframe id="ytplayer" class="video" type="text/html" width="640" height="900" src="" frameborder="0" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+          <!-- <source src="./video/rain.mp4" type="video/mp4"> -->
+        <!-- </video> -->
       </div>
       <div class="time-select">
         <button data-time="120">2 minutes</button>
@@ -25,7 +29,7 @@
         <audio class="song">
           <source src="./sounds/rain.mp3" />
         </audio>
-        <img class="play" src="./svg/play.svg" alt="play" tabindex="0">
+        <!-- <img class="play" src="./svg/play.svg" alt="play" tabindex="0"> -->
         <svg
           class="track-outline"
           width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,19 +43,19 @@
         <h3 class="time-display">0:00</h3>
       </div>
       <div class="sound-picker">
-        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
+        <button data-video="https://www.youtube-nocookie.com/embed/ynLpZGegiJE?autoplay=1&loop=1&modestbranding=1&controls=0&playlist=ynLpZGegiJE">
           <img src="./svg/rain.svg" alt="rain">
         </button>
-        <button data-sound="./sounds/sunny.mp3" data-video="./video/sunny.mp4">
+        <button data-video="https://www.youtube-nocookie.com/embed/Kb8CW3axqRE?autoplay=1&iv_load_policy=3&start=10&loop=1&modestbranding=1&playlist=Kb8CW3axqRE">
           <img src="./svg/sun.svg" alt="rain">
         </button>
-        <button data-sound="./sounds/forest.mp3" data-video="./video/forest.mp4">
+        <button data-video="https://www.youtube-nocookie.com/embed/Ftm2uv7-Ybw?autoplay=1&iv_load_policy=3&loop=1&modestbranding=1&playlist=Ftm2uv7-Ybw">
           <img src="./svg/forest.svg" alt="rain">
         </button>
-        <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4">
+        <button data-video="https://www.youtube-nocookie.com/embed/ajwwLEMLaIA?autoplay=1&start=60&iv_load_policy=3&loop=1&modestbranding=1&playlist=ajwwLEMLaIA">
           <img src="./svg/waves.svg" alt="beach">
         </button>
-        <button data-sound="./sounds/birds.mp3" data-video="./video/birds.mp4">
+        <button data-video="https://www.youtube-nocookie.com/embed/tbodhmmqa-g?autoplay=1&iv_load_policy=3&loop=1&modestbranding=1&playlist=tbodhmmqa-g">
           <img src="./svg/birds.svg" alt="rain">
         </button>
       </div>
@@ -66,6 +70,8 @@
         <li><a href="https://www.youtube.com/watch?v=tbodhmmqa-g">Birds</a></li>
       </ul>
     </details>
+
+
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

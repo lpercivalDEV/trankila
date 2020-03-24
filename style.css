@@ -42,7 +42,7 @@ body{
   font-size: 50px;
 }
 
-video {
+.video {
   position: fixed;
   top: 0%;
   left: 0%;
@@ -132,7 +132,7 @@ details{
 }
 
 li{
-  list-style: none; 
+  list-style: none;
 }
 
 a{
