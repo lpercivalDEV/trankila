@@ -1,7 +1,9 @@
-# Trankila - meditation app
+# Trankila - meditation app (work in progress)
+**TO DO:** API works great but timer and UI elements need a fixin...
+
 Trankila is a simple meditation app with a visual timer, timer selections, and background videos.
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
+[Live Demo - WIP](https://lpercivaldev.github.io/trankila/)
 
 ![alt tag](https://github.com/lpercivalDEV/trankila/blob/master/app_previews/trankila1.png)
 
